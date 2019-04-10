@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>Let See How your performed</p>
+{% if hasLowerCase and hasUpperCase and endsWithNumber %}
+    <p>Your username passed all 3 requirements!</p>
+{% else %}
+<ul>
+    {% if not hasLowerCase %}
+        <li>You did not use lowercase character</li>
+    {% endif %}
+    {% if not hasUpperCase %}
+        <li>You did not use uppercase character</li>
+    {% endif %}
+    {% if not endsWithNumber %}
+        <li>You did not end your user name with a number</li>
+    {% endif %}
+</ul>
+{% endif %}
+{% endblock %}
